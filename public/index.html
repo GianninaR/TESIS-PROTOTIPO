@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link href="./style.css" rel="stylesheet" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>Tesis</title>
+  </head>
+  <body>
+    
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+
+    <div class="block-columns">
+      <div class="block-column">
+
+    <video
+    id="streaming"
+    class="video-tesis"
+    controls
+    preload="auto"
+    width="auto"
+    height="500"
+    poster="./portada.jpg"
+    data-setup="{}"
+  >
+       <source src="https://677547d17040.us-east-1.playback.live-video.net/api/video/v1/us-east-1.791987288359.channel.YdVAVTzdibjg.m3u8" type="application/x-mpegURL">
+  </video>
+
+
+</div>
+<div class="block-column">
+
+  <div class="app">
+		<div class="screen join-screen active">
+			<div class="form">
+				<h2>Ingresa a la sala de chat</h2>
+				<div class="form-input">
+					<label>Nombre de usuario</label>
+					<input type="text" id="username">
+				</div>
+				<div class="form-input">
+					<button id="join-user">Ingresar</button>
+				</div>
+			</div>
+		</div>
+		<div class="screen chat-screen">
+			<div class="header">
+				<div class="logo">Sala de chat</div>
+				<button id="exit-chat">Salir</button>
+			</div>
+			<div class="messages">
+			</div>
+			<div class="typebox">
+				<input type="text" id="message-input">
+				<button id="send-message">Enviar</button>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+</div>
+<h2>Giannina Rotela - 2022</h2>
+  <script src="./video.min.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="./code.js"></script>
+  </body>
+</html>
